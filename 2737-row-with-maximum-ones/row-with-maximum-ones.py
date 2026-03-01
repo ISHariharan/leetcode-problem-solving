@@ -1,12 +1,12 @@
 class Solution:
     def rowAndMaximumOnes(self, mat: List[List[int]]) -> List[int]:
-        res = [0, 0]
-        row = len(mat)
-        col = len(mat[0])
-
-        for i in range(row):
-            count = sum(mat[i])
-            if count > res[1]:
-                res[0] = i
-                res[1] = count
-        return res 
+        index = 0
+        least_index =  0
+        max_count = 0
+        for row in mat:
+            one_count = row.count(1)
+            if((max_count < one_count)):
+                least_index = index
+                max_count = one_count 
+            index += 1
+        return [least_index, max_count]
