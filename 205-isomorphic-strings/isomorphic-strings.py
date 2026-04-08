@@ -19,5 +19,6 @@ class Solution:
         if(len(s) != len(t)):
             return False
         with_s = self.findIfIsomorphic(s, t)
-        with_t = self.findIfIsomorphic(t, s)
+        if(with_s):
+            with_t = self.findIfIsomorphic(t, s)
         return with_s and with_t
