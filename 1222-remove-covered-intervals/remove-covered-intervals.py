@@ -4,7 +4,6 @@ class Solution:
         length = len(intervals)
         index = 0
         while index < length-1:
-            canBeDeleted = False
             if sortedIntervals[index][0] <= sortedIntervals[index+1][0] and sortedIntervals[index+1][1] <= sortedIntervals[index][1]:
                 del sortedIntervals[index + 1]
                 length = len(sortedIntervals) 
