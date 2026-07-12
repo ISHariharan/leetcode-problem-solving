@@ -8,9 +8,9 @@ class Solution:
         if r * c > length or r * c < length:
             return mat
         index = 0
-        matrix = [[0] * c for index in range(r)]
+        mat = [[0] * c for index in range(r)]
         for row in range(r):
             for col in range(c):
-                matrix[row][col] = flattenArr[index]
+                mat[row][col] = flattenArr[index]
                 index += 1
-        return matrix
+        return mat
