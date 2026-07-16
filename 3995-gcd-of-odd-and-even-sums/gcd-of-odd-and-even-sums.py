@@ -1,7 +1,7 @@
 class Solution:
     def gcd(x, y) -> int:
-        if x == 0:
-            return y
+        if y == 0:
+            return x
         return gcd(y, x%y)
     def gcdOfOddEvenSums(self, n: int) -> int:
         sumOfEvenNumbers = n * (n+1)
