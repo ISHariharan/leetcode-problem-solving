@@ -1,9 +1,7 @@
 class Solution:
     def maxProduct(self, n: int) -> int:
-        maxProd = 0
-        sen = str(n)
-        length = len(sen)
-        for i in range(length):
-            for j in range(i + 1,length):
-                maxProd = max(maxProd, int(sen[i]) * int(sen[j]))
-        return maxProd
+        arr = sorted(str(n))
+        length = len(arr)
+        if length == 1:
+            return 0
+        return int(arr[length - 1]) * int(arr[length - 2])
