@@ -22,4 +22,4 @@ class Solution:
         ans = []
         candidates = sorted(candidates)
         self.findCombinations(candidates, ans, target, [], 0, len(candidates))
-        return [list(x) for x in set(tuple(x) for x in ans)]
+        return ans
