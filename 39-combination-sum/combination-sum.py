@@ -15,5 +15,6 @@ class Solution:
         self.findCombinations(candidates, index + 1, length, target, temp, ans)
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         ans = []
+        candidates = sorted(candidates)
         self.findCombinations(candidates, 0, len(candidates), target, [], ans)
         return ans
