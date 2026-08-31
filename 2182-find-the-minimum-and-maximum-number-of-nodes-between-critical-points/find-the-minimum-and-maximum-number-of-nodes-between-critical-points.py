@@ -21,10 +21,10 @@ class Solution:
             mid = mid.next
             right = right.next
             index += 1
-        if indexes == [] or len(indexes) == 1:
+        length = len(indexes)
+        if indexes == [] or length == 1:
             return [-1, -1]
         indexes = sorted(indexes)
-        length = len(indexes)
         maxDistance = indexes[length - 1] - indexes[0]
         minDistance = float('inf')
         left = 0
