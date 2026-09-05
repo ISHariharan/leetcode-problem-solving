@@ -18,9 +18,9 @@ class Solution:
     def firstStableIndex(self, nums: list[int], k: int) -> int:
         minimum = self.findMinimum(reversed(nums))
         maximum = self.findMaximum(nums)
-        length = len(nums)
-        for index in range(length):
-            score = maximum[index] - minimum[length - 1 - index]
+        # length = len(nums)
+        for index in range(len(nums)):
+            score = maximum[index] - minimum[len(nums) - 1 - index]
             if score <= k:
                 return index
         return -1
