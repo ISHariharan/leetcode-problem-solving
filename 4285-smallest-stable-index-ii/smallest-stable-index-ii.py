@@ -16,12 +16,11 @@ class Solution:
             result.append(minimum)
         return result
     def firstStableIndex(self, nums: list[int], k: int) -> int:
-        # minimum, maximum = [], []
         minimum = self.findMinimum(reversed(nums))
         maximum = self.findMaximum(nums)
-        right = len(nums)
-        for index in range(right):
-            score = maximum[index] - minimum[right - 1 - index]
+        length = len(nums)
+        for index in range(length):
+            score = maximum[index] - minimum[length - 1 - index]
             if score <= k:
                 return index
         return -1
